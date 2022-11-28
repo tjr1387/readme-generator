@@ -59,22 +59,68 @@ const questions = [
 
 // Function which will plop in the user's reponses into a big string, intended to become the README
 function generateReadmeBody(responseObject) {
-    return ``
+    return `# ${responseObject.title}
+
+## Description
+
+${responseObject.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Questions](#questions)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [License](#license)
+
+## Installation
+
+${responseObject.installation}
+
+## Usage
+
+${responseObject.usage}
+
+## Credits
+
+...maybe you?
+
+## Questions
+
+If you have any questions, you can check out my GitHub here: https://github.com/${responseObject.username} 
+Additionally, you can email me at ${responseObject.email}
+
+## How to Contribute
+
+${responseObject.contribute}
+
+## Tests
+
+${responseObject.testing}
+
+## License
+
+Covered under the ${responseObject.license} license.`
 }
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Function which will will create/write the generated README to file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Success!')
+    );
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// Function which initializes app
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((response) => {
+        const madeReadMe = generateReadmeBody(response);
+        writeToFile('./assets/testReadmes/README.md', madeReadMe);
+    });
+}
 
 // Function call to initialize app
 init();
-
-
-// inquirer
-//   .prompt(questions)
-//   .then((response) => {
-//     console.log(response);
-//   }
-// );
