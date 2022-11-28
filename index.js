@@ -89,7 +89,7 @@ ${responseObject.usage}
 
 ## Questions
 
-If you have any questions, you can check out my GitHub here: https://github.com/${responseObject.username} 
+If you have any questions, you can check out my GitHub here: https://github.com/${responseObject.username}  \n
 Additionally, you can email me at ${responseObject.email}
 
 ## How to Contribute
@@ -118,7 +118,7 @@ function init() {
     .prompt(questions)
     .then((response) => {
         const madeReadMe = generateReadmeBody(response);
-        writeToFile('./assets/testReadmes/README.md', madeReadMe);
+        writeToFile('./assets/testReadmes/SecondREADME.md', madeReadMe);
     });
 }
 
