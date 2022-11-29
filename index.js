@@ -1,6 +1,8 @@
-// TODO: Include packages needed for this application
+// Requires
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
+
 
 // The set of questions for inquirer to run
 const questions = [
@@ -13,31 +15,37 @@ const questions = [
         type: 'input',
         message: 'What is the title of your project?',
         name: 'title',
+        default: 'Untitled Project'
     },
     {
         type: 'input',
         message: 'Please give a description for your project.',
         name: 'description',
+        default: 'None given at this point.'
     },
     {
         type: 'input',
         message: 'Please provide installation instructions, if applicable.',
         name: 'installation',
+        default: 'None given at this point.'
     },
     {
         type: 'input',
         message: 'Please provide information regarding the usage of this project.',
         name: 'usage',
+        default: 'None given at this point.'
     },
     {
         type: 'input',
         message: 'Please provide guidelines for contribution.',
         name: 'contribute',
+        default: 'N/A'
     },
     {
         type: 'input',
         message: 'Provide instructions for testing, if you want',
         name: 'testing',
+        default: 'N/A'
     },
     {
         type: 'list',
@@ -46,7 +54,7 @@ const questions = [
         choices: [
           'MIT',
           'Apache',
-          'GPL',
+          'GPLv2',
           'None'
         ]
     },
@@ -54,56 +62,9 @@ const questions = [
         type: 'input',
         message: 'What is your email address?',
         name: 'email',
+        default: `.... JUST KIDDING! I don't want anyone to see it!`
     }
 ];
-
-// Function which will plop in the user's reponses into a big string, intended to become the README
-function generateReadmeBody(responseObject) {
-    return `# ${responseObject.title}
-
-## Description
-
-${responseObject.description}
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [Questions](#questions)
-- [How to Contribute](#how-to-contribute)
-- [Tests](#tests)
-- [License](#license)
-
-## Installation
-
-${responseObject.installation}
-
-## Usage
-
-${responseObject.usage}
-
-## Credits
-
-...maybe you?
-
-## Questions
-
-If you have any questions, you can check out my GitHub here: https://github.com/${responseObject.username}  \n
-Additionally, you can email me at ${responseObject.email}
-
-## How to Contribute
-
-${responseObject.contribute}
-
-## Tests
-
-${responseObject.testing}
-
-## License
-
-Covered under the ${responseObject.license} license.`
-}
 
 // Function which will will create/write the generated README to file
 function writeToFile(fileName, data) {
@@ -115,12 +76,13 @@ function writeToFile(fileName, data) {
 // Function which initializes app
 function init() {
     inquirer
-    .prompt(questions)
-    .then((response) => {
-        const madeReadMe = generateReadmeBody(response);
-        writeToFile('./assets/testReadmes/SecondREADME.md', madeReadMe);
-    });
+        .prompt(questions)
+        .then((response) => {
+            const madeReadMe = generateMarkdown(response);
+            writeToFile('./assets/testReadmes/FifthREADME.md', madeReadMe);
+        });
 }
+
 
 // Function call to initialize app
 init();
