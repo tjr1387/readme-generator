@@ -26,7 +26,8 @@ You will want to pull this repo down so you can run the file in your command lin
 Link to video: https://drive.google.com/file/d/1Ui7JnxMK4tqygwt_J86o2xpUZ0on4dp5/view
 
 Screenshot(s):
-
+![Finished inquirer question set](./assets/mockups.inquirer-complete-terminal.png?raw=true "Example of a finished inquirer set")
+![All defaults different license](./assets/mockups.all-defaults-difft-license.png?raw=true "All defaults chosen with a different license than my README")
 
 ## Credits
 
