@@ -3,7 +3,7 @@
 
 ## Description
 
-Using NodeJS and its 'Inquirer' package, this app runs through a series of questions prompting the user to fill out each section of a professional README file, complete with a license badge (if a license is used) and a functional Table of Contents. After the questions are done, a 'README.md' is generated based on the user's answers.
+Using NodeJS and its 'Inquirer' package, this app runs through a series of questions prompting the user to fill out each section of a professional README file, complete with a license badge (if a license is used) and a functional Table of Contents. After the questions are done, a 'README.md' is generated based on the user's answers. *special note* This README was generated using my app, which is shown in my video -- I did add a bit to it afterward (video link / screenshots / other small commentary)
 
 ## Table of Contents
 
@@ -46,6 +46,10 @@ N/A
 ## Tests
 
 N/A
+
+## Comments/Flaws
+
+In my assets folder I left a bunch of test READMEs as well as a palette for when I was first creating it; figured there was no reason to remove them. I really didn't know what else to use as screenshots seeing as the product is the README itself and here you are reading it! I was also torn on whether to add 'package-lock.json' to .gitignore - the googling I did seemed pretty ambivalent, leaning towards _not_ ignoring it. Shame on me if I'm wrong! The last thing is that the video I did is pretty long and hacky, so please, speed it up (lol)
 
 ## License
 
