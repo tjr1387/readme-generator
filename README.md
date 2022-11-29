@@ -21,7 +21,12 @@ Need both NodeJS (preferably with Git Bash if using Windows) and its 'Inquirer' 
 
 ## Usage
 
-You will want to pull this repo down so you can run the file in your command line. Once in the project directory in your terminal, run 'node index.js' to begin the questions. You will be asked for your GitHub username, email, as well as to fill out each of the README's sections (Description, Installation, Usage, Credits, Questions, Contribution instructions, Testing and a license). Once done, a README (in markdown) reflecting your answers will be generated, complete with a license badge/link and a functional Table of Contents. If you want to have the README generated in a different folder, you can change its generation location (and name) inside the first argument of the 'writeToFile' invocation, in 'index.js'. There are defaults to every question if you leave them blank, except for your GitHub username. If you leave that out, then you're in need of more help than I can provide! 
+You will want to pull this repo down so you can run the file in your command line. Once in the project directory in your terminal, run 'node index.js' to begin the questions. You will be asked for your GitHub username, email, as well as to fill out each of the README's sections (Description, Installation, Usage, Credits, Questions, Contribution instructions, Testing and a license). Once done, a README (in markdown) reflecting your answers will be generated, complete with a license badge/link and a functional Table of Contents. If you want to have the README generated in a different folder, you can change its generation location (and name) inside the first argument of the 'writeToFile' invocation, in 'index.js'. There are defaults to every question if you leave them blank, except for your GitHub username. If you leave that out, then you're in need of more help than I can provide!
+
+Link to video: https://drive.google.com/file/d/1Ui7JnxMK4tqygwt_J86o2xpUZ0on4dp5/view
+
+Screenshot(s):
+
 
 ## Credits
 
@@ -31,7 +36,7 @@ GitHub user 'andreasonny83' for a nice boilerplate '.gitignore' file
 
 If you have any questions, you can check out my GitHub here: https://github.com/tjr1387  
 
-Additionally, you can email me at .... JUST KIDDING! I don't want anyone to see it!
+Additionally, you can email me at .... JUST KIDDING! I don't want anyone to see it! (this was my default in the demo so I'm going to leave it here!)
 
 ## How to Contribute
 
