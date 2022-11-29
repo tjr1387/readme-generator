@@ -79,7 +79,7 @@ function init() {
         .prompt(questions)
         .then((response) => {
             const madeReadMe = generateMarkdown(response);
-            writeToFile('./assets/testReadmes/FifthREADME.md', madeReadMe);
+            writeToFile('./assets/testReadmes/SeventhREADME.md', madeReadMe);
         });
 }
 
