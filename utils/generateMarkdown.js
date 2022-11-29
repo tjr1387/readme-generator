@@ -1,4 +1,4 @@
-// Function that returns a license badge based on which license is passed in, or an empty string if none passed in
+// Function that returns a license badge&link based on which license is passed in, or an empty string if none passed in
 function renderLicenseBadge(license) {
     let licBadge = '';
     switch(license) {
@@ -16,10 +16,6 @@ function renderLicenseBadge(license) {
     }
     return licBadge
 }
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {}
 
 // Function which gives text to the license section at the bottom (separate from the badge/link at the top)
 function renderLicenseSection(license) {
@@ -59,7 +55,7 @@ ${responseObject.usage}
 
 ## Credits
 
-...maybe you?
+${responseObject.credits}
 
 ## Questions
 

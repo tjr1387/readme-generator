@@ -37,6 +37,12 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'If there are any credits to give, do so here.',
+        name: 'credits',
+        default: '..Maybe you?'
+    },
+    {
+        type: 'input',
         message: 'Please provide guidelines for contribution.',
         name: 'contribute',
         default: 'N/A'
@@ -79,7 +85,7 @@ function init() {
         .prompt(questions)
         .then((response) => {
             const madeReadMe = generateMarkdown(response);
-            writeToFile('./assets/testReadmes/SeventhREADME.md', madeReadMe);
+            writeToFile('./assets/testReadmes/EighthREADME.md', madeReadMe);
         });
 }
 
